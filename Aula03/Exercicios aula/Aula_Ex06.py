@@ -1,7 +1,15 @@
-'''6. Crie um dicionário representando um carro com as chaves: marca, modelo e ano.
-a. Adicione ao dicionário do carro a chave 'cor'.
-b. Crie um dicionário de notas de 3 alunos (nome como chave, nota como
-valor).
-'''
+#6. Crie um dicionário representando um carro com as chaves: marca, modelo e ano. 
+# a) Adicione ao dicionário do carro a chave 'cor'.
 
-carro = {"marca" :}
+
+
+carro = {
+        "marca" : "Honda",
+        "modelo" : "civic",
+        "ano" : 1998
+        }
+
+carro["cor"] = "preto"
+
+print
+print(carro)
