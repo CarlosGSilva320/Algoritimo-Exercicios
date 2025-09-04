@@ -14,4 +14,5 @@ turma = {
 print(turma["aluno1"]["carlos"])
 turma.pop("aluno2")
 
+
 print(turma)
