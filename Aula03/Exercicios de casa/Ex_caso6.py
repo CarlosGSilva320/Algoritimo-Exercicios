@@ -18,7 +18,86 @@ O sistema precisa:
 3. Gerar uma lista apenas com os nomes dos usuários que têm livros emprestados. 
 4. Calcular a média de dias de empréstimo. '''
 
-biblioteca = [ 
+lista = [ 
     ["Dom Casmurro", "Ana", 5], 
     ["1984", "Carlos", 12], 
     ["O Hobbit", "Marina", 3] ]
+
+dicionario = {}
+
+for i in lista:
+    titulo = i[0]
+    nome = i[1]
+    dias = i[2]
+
+    dicionario[titulo] = {"nome" : nome, "dias_emprestados" : dias}
+
+print(dicionario)
+
+
+def analisar_dados():
+
+
+    for chave, valor in dicionario.items():
+        if valor["dias_emprestados"] > 7:
+            print(f"Titulo emprestado a mais de 7 dias: {chave}, {valor['dias_emprestados']} dias")
+
+
+
+    maior_dia = 0
+    mais_tempo = []
+
+    for chave, valor in dicionario.items():
+        if valor["dias_emprestados"] > maior_dia:
+            maior_dia = valor["dias_emprestados"]
+            mais_tempo = chave
+
+    print(f"O dia livro emprestado mais tempo é: {mais_tempo}, {maior_dia} dias")
+
+    
+    nome_usuario = []
+
+    for chave, valor in dicionario.items():
+        if valor["dias_emprestados"] > 0:
+            nome_usuario.append(valor["nome"])
+    print(f"Usuarios com livros emprestados: {nome_usuario}")
+
+    soma = 0
+
+    for valor in dicionario.values():
+        soma += valor["dias_emprestados"] 
+    
+    media = soma / len(dicionario)
+    print(f"A média de dias emprestados é de {media:.2f} dias" )
+analisar_dados()
+
+
+
+
+
+
+
+'''for livro in biblioteca:
+    titulo = livro[0]
+    usuario = livro[1]
+    dias = livro[2]
+
+    biblioteca_dicionario[titulo] = {"usuário" : usuario, "dias emprestados" : dias}
+
+def analise_dados():
+
+    mais_7_dias = []
+    for titulo, dados in biblioteca_dicionario.items():
+
+        if dados["dias emprestados"] > 7:
+            mais_7_dias.append(titulo)
+    
+    
+    print(f"O livro {mais_7_dias} etá emprestado a amais de 7 dias.")
+
+    mais_tempo = max(biblioteca_dicionario, value=biblioteca_dicionario.get)
+
+    print(mais_tempo)
+
+analise_dados()
+print(biblioteca_dicionario)'''
