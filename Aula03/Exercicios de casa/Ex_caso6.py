@@ -70,34 +70,3 @@ def analisar_dados():
     media = soma / len(dicionario)
     print(f"A média de dias emprestados é de {media:.2f} dias" )
 analisar_dados()
-
-
-
-
-
-
-
-'''for livro in biblioteca:
-    titulo = livro[0]
-    usuario = livro[1]
-    dias = livro[2]
-
-    biblioteca_dicionario[titulo] = {"usuário" : usuario, "dias emprestados" : dias}
-
-def analise_dados():
-
-    mais_7_dias = []
-    for titulo, dados in biblioteca_dicionario.items():
-
-        if dados["dias emprestados"] > 7:
-            mais_7_dias.append(titulo)
-    
-    
-    print(f"O livro {mais_7_dias} etá emprestado a amais de 7 dias.")
-
-    mais_tempo = max(biblioteca_dicionario, value=biblioteca_dicionario.get)
-
-    print(mais_tempo)
-
-analise_dados()
-print(biblioteca_dicionario)'''
