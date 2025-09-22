@@ -18,24 +18,6 @@ musicas = [
         "avaliacoes": [5, 5, 5, 5, 4, 4, 5, 5]
     }
 ]
-#3. Monte um ranking das músicas mais bem avaliadas (ordem decrescente da média das notas). 
-def mais_avaliações():
-
-    ranking = []
-
-    for m in musicas:
-        titulo = m["titulo"]
-        media = sum(m["avaliacoes"]) / len(m["avaliacoes"])
-        
-
-
-
-
-
-
-
-
-
 #1. Crie uma função que calcule a nota média de avaliação de cada música.
 
 def media():
@@ -63,3 +45,16 @@ def maior_downloads():
     return artista, total
 resultado = maior_downloads()
 print(resultado)
+
+#3. Monte um ranking das músicas mais bem avaliadas (ordem decrescente da média das notas). 
+#def mais_avaliações():
+
+ranking = []
+
+for m in musicas:
+    titulo = m["titulo"]
+    media = round(sum(m["avaliacoes"]) / len(m["avaliacoes"]), 2)
+    ranking.append([titulo, media])
+ranking_ordenaddo = sorted(ranking, key=lambda x: x[1], reverse=True )
+
+print(ranking_ordenaddo)
