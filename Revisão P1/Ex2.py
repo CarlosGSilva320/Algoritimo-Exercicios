@@ -18,6 +18,7 @@ atletas = [
         "treinos": {"Corrida": 20, "Ciclismo": 18}
     }
 ]
+
 #1. Crie uma função que calcule a média de idade dos atletas que praticam um esporte específico.
 
 
@@ -61,6 +62,22 @@ def  mais_treino(nome):
             "Nome não encontrado"
 resultado = mais_treino("João")
 print(f"O esporte mais treinado foi {resultado[0]} durante {resultado[1]} horas.")
+
+#3. Monte uma lista com os atletas que praticam mais de 2 modalidades e exiba seus nomes.
+
+def modalidade():
+
+    resultado = {}
+
+    for p in atletas:
+        if len(p["modalidades"]) > 2:
+            resultado[p["nome"]] = p["modalidades"]
+    return resultado
+    
+
+        
+resposta = modalidade()
+print(resposta)
 
 
 
