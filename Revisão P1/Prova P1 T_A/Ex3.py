@@ -25,9 +25,9 @@ def calcula_imposto_renda():
     elif salario <= 3751.05:
         imposto = (salario * (15 / 100)) - 370.4
     elif salario <= 4664.68:
-        imposto = (salario * (22.5)) - 651.73
+        imposto = salario * (22.5/100) - 651.73
     else:
-        imposto = (salario * (27.5)) - 884.96
+        imposto = salario * (27.5/100) - 884.96
     return imposto
 resultado = calcula_imposto_renda()
 print(f"O salário Bruto é de R${salario:.2f}")
