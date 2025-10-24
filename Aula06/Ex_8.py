@@ -3,13 +3,13 @@
 Tarefa: Crie uma matriz 5x6 e marque quais cadeiras estão ocupadas com “X” e quais estão 
 livres com “O”.'''
 
-filas = 2
-cadeiras = 3
+filas = 5
+cadeiras = 6
 lista = []
 for i in range(filas):
     cadeira = []
     for j in range(cadeiras):
-        cadeira.append(input(f"Digite letra 'O' para vaiza e letra 'X' para ocupada -> Fila: {i+1} -> cadeira: {j+1} ->  ").upper())
+        cadeira.append(input(f"Digite letra 'O' para vazia e letra 'X' para ocupada -> Fila: {i+1} -> cadeira: {j+1} ->  ").upper())
     lista.append(cadeira)
 for i, j in enumerate(lista):
     print(f"Fila {i + 1}: {j}")
